@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>天涯海角俱樂部 — 追夢人</title>
+<meta name="description" content="天涯海角俱樂部 — 追夢人：留學與進修分享會。以電影式官網呈現，含講者、議程、報名與加入行事曆。">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>
+  :root{
+    --ink:#0f1624;--muted:#7a8897;--bg:#0b1020;--card:#0f1a2a;
+    --accent:#ff4da6;--glow:#e0c23a;--btn:#f6ae2d;--btnText:#1b1b1b;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Noto Sans TC,Roboto,Helvetica,Arial,"PingFang TC","Microsoft JhengHei",sans-serif;color:#eef3f8;background:var(--bg)}
+  a{color:#8cd3ff;text-decoration:none} a:hover{text-decoration:underline}
+  .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+  /* HERO */
+  header.hero{
+    position:relative;min-height:88vh;display:grid;place-items:center;color:#fff;text-align:left;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255,77,166,.25) 0%, rgba(255,77,166,0) 40%),
+      linear-gradient(180deg, rgba(11,16,32,.55), rgba(11,16,32,.8)),
+      url('assets/PosterDreamers.png') center/cover no-repeat;
+  }
+  .hero .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
+  .brand{display:flex;gap:12px;align-items:center;margin-bottom:10px;opacity:.95}
+  .brand .kicker{letter-spacing:.12em;text-transform:uppercase;font-weight:700;font-size:13px;color:#c7d9ff}
+  h1{font-size:clamp(32px,4.4vw,64px);line-height:1.06;margin:6px 0 12px}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+  .badge{background:rgba(255,255,255,.12);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-size:13px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+  .btn{display:inline-flex;align-items:center;gap:8px;background:var(--btn);color:var(--btnText);font-weight:800;border-radius:12px;padding:12px 16px;border:none;cursor:pointer;font-size:16px;box-shadow:0 6px 16px rgba(0,0,0,.28)}
+  .btn.secondary{background:#0f2036;color:#e6f0ff;border:1px solid rgba(255,255,255,.18)}
+  .meta{margin-top:12px;color:#d9e6ff;font-size:14px}
+  .poster{width:100%;border-radius:16px;box-shadow:0 14px 34px rgba(0,0,0,.5);border:4px solid rgba(255,255,255,.25)}
+  .glint{color:var(--accent)}
+
+  /* STRIP */
+  .infostrip{background:rgba(16,26,46,.66);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.06);box-shadow:0 6px 22px rgba(0,0,0,.2);margin-top:-46px;border-radius:16px;padding:22px}
+  .infogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .icard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px}
+  .icard h4{margin:0 0 6px;font-size:16px;color:#fff}
+  .icard p{margin:0;color:#c6d0e0;font-size:14px}
+
+  /* SECTIONS */
+  section{padding:60px 0} section h2{font-size:32px;margin:0 0 12px}
+  .lead{color:#b6c2d4;max-width:880px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+  .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px}
+  .card h3{margin:0 0 10px}
+
+  /* Speakers */
+  .speakers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}
+  .tag{display:inline-block;background:#1b2a44;border:1px solid rgba(255,255,255,.12);color:#dbe8ff;padding:6px 10px;border-radius:999px;font-size:13px;margin:4px 6px 0 0}
+  .avatar{display:flex;align-items:center;gap:10px;background:#0f1a2c;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px}
+  .dot{width:40px;height:40px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #fff 0%, #ffe3f2 18%, #ff4da6 60%, #ff2d8a 100%);box-shadow:0 0 0 3px rgba(255,77,166,.3)}
+
+  /* Timeline */
+  .timeline{position:relative;margin-top:18px}
+  .timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:3px;background:rgba(255,255,255,.12)}
+  .titem{position:relative;margin-left:44px;margin-bottom:16px}
+  .titem:before{content:"";position:absolute;left:-29px;top:6px;width:16px;height:16px;background:var(--glow);border:3px solid rgba(255,255,255,.9);border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.12)}
+  .titem h4{margin:0 0 6px;color:#fff} .titem p{margin:0;color:#c6d0e0;font-size:14px}
+
+  /* Footer */
+  footer{background:#0a0f1d;color:#cfe5ef;padding:36px 0}
+  footer a{color:#fff;text-decoration:underline}
+  .grid-2{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+
+  @media(max-width:980px){
+    .hero .wrap{grid-template-columns:1fr}
+    .infogrid{grid-template-columns:repeat(2,1fr)}
+    .cards{grid-template-columns:1fr}
+    .grid-2{grid-template-columns:1fr}
+    .speakers{grid-template-columns:repeat(2,1fr)}
+  }
+</style>
+<meta property="og:title" content="天涯海角俱樂部 — 追夢人">
+<meta property="og:description" content="一起追尋夢想，出國進修不再只是想像。">
+<meta property="og:image" content="assets/PosterDreamers.png">
+<meta name="theme-color" content="#0b1020">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap container">
+    <div>
+      <div class="brand">
+        <div class="kicker">FACULTY CLUB — OFFICIAL</div>
+      </div>
+      <h1><span class="glint">我們都是追夢人</span><br>天涯海角俱樂部｜分享會</h1>
+      <div class="badges">
+        <span class="badge">2025/11/23（日）10:30–12:00（GMT+08:00 台北）</span>
+        <span class="badge">地點：奇美博物館 布雷西亞廳沙龍區</span>
+        <span class="badge">座標：22.936863, 120.225651</span>
+      </div>
+      <p class="meta">曾經有個留學夢…想要踩著幾百年的石板路，看著霍格華茲校園的古建築；看著學生餐廳裡的壁爐，燃燒著我炙熱的夢想！！來吧！！聽聽海外回來的老師們，如何一步一步完成人生夢想清單☑️ 相信我，你也可以！</p>
+      <div class="cta">
+        <a class="btn" href="#register">我要參加</a>
+        <a class="btn secondary" href="https://maps.google.com/?q=22.936863,120.225651" target="_blank" rel="noopener">查看地圖</a>
+        <a class="btn secondary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92%E4%BF%B1%E6%A8%82%E9%83%A8%20%E2%80%94%20%E8%BF%BD%E5%A4%A2%E4%BA%BA&dates=20251123T023000Z/20251123T040000Z&details=%E6%9B%BE%E7%B6%93%E6%9C%89%E5%80%8B%E7%95%99%E5%AD%B8%E5%A4%A2%E2%80%A6%E6%83%B3%E8%A6%81%E8%B8%A9%E8%91%97%E5%B9%BE%E7%99%BE%E5%B9%B4%E7%9A%84%E7%9F%B3%E6%9D%BF%E8%B7%AF%EF%BC%8C%E7%9C%8B%E8%91%97%E9%9C%8D%E6%A0%BC%E8%8F%AF%E8%8C%B2%E6%A0%A1%E5%9C%92%E7%9A%84%E5%8F%A4%E5%BB%BA%E7%AF%89%EF%BC%9B%E7%9C%8B%E8%91%97%E5%AD%B8%E7%94%9F%E9%A4%90%E5%BB%B3%E8%A3%A1%E7%9A%84%E5%A3%81%E7%88%90%EF%BC%8C%E7%87%83%E7%87%92%E8%91%97%E6%88%91%E7%82%99%E7%86%B1%E7%9A%84%E5%A4%A2%E6%83%B3%EF%BC%81%EF%BC%81%E4%BE%86%E5%90%A7%EF%BC%81%EF%BC%81%E8%81%BD%E8%81%BD%E6%B5%B7%E5%A4%96%E5%9B%9E%E4%BE%86%E7%9A%84%E8%80%81%E5%B8%AB%E5%80%91%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AE%8C%E6%88%90%E4%BA%BA%E7%94%9F%E5%A4%A2%E6%83%B3%E6%B8%85%E5%96%AE%E2%98%91%EF%B8%8F%20%E7%9B%B8%E4%BF%A1%E6%88%91%EF%BC%8C%E4%BD%A0%E4%B9%9F%E5%8F%AF%E4%BB%A5%EF%BC%81&location=%E5%A5%87%E7%BE%8E%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E5%B8%83%E9%9B%B7%E8%A5%BF%E4%BA%9E%E5%BB%B3%E6%B2%99%E9%BE%8D%E5%8D%80%EF%BC%8C717015%20%E5%8F%B0%E5%8D%97%E5%B8%82%E4%BB%81%E5%BE%B7%E5%8D%80%E6%96%87%E8%8F%AF%E8%B7%AF%E4%BA%8C%E6%AE%B566%E8%99%9F%EF%BC%88%E6%88%90%E5%8A%9F%E9%87%8C%EF%BC%89" target="_blank" rel="noopener">加入 Google 行事曆</a>
+        <a class="btn secondary" href="Dreamers.ics" download>下載 .ics</a>
+      </div>
+      <p class="meta" id="countdown">距離開始：計算中…</p>
+    </div>
+    <div aria-hidden="true">
+      <img class="poster" src="assets/PosterDreamers.png" alt="我們都是追夢人 海報">
+    </div>
+  </div>
+</header>
+
+<div class="container infostrip" role="region" aria-label="關鍵資訊">
+  <div class="infogrid">
+    <div class="icard">
+      <h4>活動亮點</h4>
+      <p>短講 × 對談 × 快速 Q&A：把留學與進修的路，拆成可操作的步驟。</p>
+    </div>
+    <div class="icard">
+      <h4>誰可以來？</h4>
+      <p>大專校院學生、住院醫師、研究生與對海外進修有興趣的社會新鮮人。</p>
+    </div>
+    <div class="icard">
+      <h4>風格</h4>
+      <p>不賣雞湯、不兜圈子；用實務清單和坑洞提醒，讓你少繞路。</p>
+    </div>
+    <div class="icard">
+      <h4>Dress code</h4>
+      <p>輕鬆即可；帶著好奇心和筆記本就對了。</p>
+    </div>
+  </div>
+</div>
+
+<section id="speakers">
+  <div class="container">
+    <h2>講者陣容（陸續增加中）</h2>
+    <div class="speakers">
+      <div class="avatar"><div class="dot"></div><div><strong>游嘉鴻</strong><div class="muted">臨床 × 研究 × 海外進修</div></div></div>
+      <div class="avatar"><div class="dot"></div><div><strong>阿杜漢祥</strong><div class="muted">跨文化學習與適應</div></div></div>
+      <div class="avatar"><div class="dot"></div><div><strong>楊清傑</strong><div class="muted">申請策略與作品集</div></div></div>
+      <div class="avatar"><div class="dot"></div><div><strong>温仁育</strong><div class="muted">研究設計與口試技巧</div></div></div>
+      <div class="avatar"><div class="dot"></div><div><strong>蘇昱仲</strong><div class="muted">臨床輪調與人脈建立</div></div></div>
+      <div class="avatar"><div class="dot"></div><div><strong>嚴世島</strong><div class="muted">國際志工與在地連結</div></div></div>
+    </div>
+    <p class="lead" style="margin-top:14px">主題將包含：選校選系、申請文件、研究題目、語言與學術寫作、經費與獎助、生活與留宿、返台發展。</p>
+    <div>
+      <span class="tag">申請文件</span><span class="tag">教授聯絡信</span><span class="tag">面試/口試</span>
+      <span class="tag">研究設計</span><span class="tag">臨床實習/輪調</span><span class="tag">獎學金</span><span class="tag">簽證/保險</span>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="container">
+    <h2>議程</h2>
+    <p class="lead">兩小時，重點濃縮。現場保留 Q&A 與自由交流時間。</p>
+    <div class="timeline">
+      <div class="titem"><h4>10:10　報到與入場</h4><p>播放歌單＋海報牆拍照。</p></div>
+      <div class="titem"><h4>10:30　暖場與開場</h4><p>主持引言：追夢不是衝動，是規劃。</p></div>
+      <div class="titem"><h4>10:40　追夢人短講 × 3</h4><p>走過申請與海外生活的三種路徑。</p></div>
+      <div class="titem"><h4>11:20　面板對談</h4><p>把申請步驟、常見坑洞與資源一次講清楚。</p></div>
+      <div class="titem"><h4>11:50　快問快答</h4><p>現場提問，講者給具體建議。</p></div>
+      <div class="titem"><h4>12:00　結束</h4><p>自由交流與合照。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="register" style="background:#0a1526">
+  <div class="container grid-2">
+    <div>
+      <h2>報名資訊</h2>
+      <p class="lead">時間：2025/11/23（日）10:30–12:00（GMT+08:00 台北）｜地點：奇美博物館 布雷西亞廳沙龍區，717015 台南市仁德區文華路二段66號（成功里）</p>
+      <p>建議事先報名保留座位。若你還在猶豫，先把它加入行事曆，當天就出發。</p>
+      <div class="cta" style="margin-top:8px">
+        <a class="btn" href="#" aria-disabled="true">開啟報名表（待公布）</a>
+        <a class="btn secondary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92%E4%BF%B1%E6%A8%82%E9%83%A8%20%E2%80%94%20%E8%BF%BD%E5%A4%A2%E4%BA%BA&dates=20251123T023000Z/20251123T040000Z&details=%E6%9B%BE%E7%B6%93%E6%9C%89%E5%80%8B%E7%95%99%E5%AD%B8%E5%A4%A2%E2%80%A6%E6%83%B3%E8%A6%81%E8%B8%A9%E8%91%97%E5%B9%BE%E7%99%BE%E5%B9%B4%E7%9A%84%E7%9F%B3%E6%9D%BF%E8%B7%AF%EF%BC%8C%E7%9C%8B%E8%91%97%E9%9C%8D%E6%A0%BC%E8%8F%AF%E8%8C%B2%E6%A0%A1%E5%9C%92%E7%9A%84%E5%8F%A4%E5%BB%BA%E7%AF%89%EF%BC%9B%E7%9C%8B%E8%91%97%E5%AD%B8%E7%94%9F%E9%A4%90%E5%BB%B3%E8%A3%A1%E7%9A%84%E5%A3%81%E7%88%90%EF%BC%8C%E7%87%83%E7%87%92%E8%91%97%E6%88%91%E7%82%99%E7%86%B1%E7%9A%84%E5%A4%A2%E6%83%B3%EF%BC%81%EF%BC%81%E4%BE%86%E5%90%A7%EF%BC%81%EF%BC%81%E8%81%BD%E8%81%BD%E6%B5%B7%E5%A4%96%E5%9B%9E%E4%BE%86%E7%9A%84%E8%80%81%E5%B8%AB%E5%80%91%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AE%8C%E6%88%90%E4%BA%BA%E7%94%9F%E5%A4%A2%E6%83%B3%E6%B8%85%E5%96%AE%E2%98%91%EF%B8%8F%20%E7%9B%B8%E4%BF%A1%E6%88%91%EF%BC%8C%E4%BD%A0%E4%B9%9F%E5%8F%AF%E4%BB%A5%EF%BC%81&location=%E5%A5%87%E7%BE%8E%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E5%B8%83%E9%9B%B7%E8%A5%BF%E4%BA%9E%E5%BB%B3%E6%B2%99%E9%BE%8D%E5%8D%80%EF%BC%8C717015%20%E5%8F%B0%E5%8D%97%E5%B8%82%E4%BB%81%E5%BE%B7%E5%8D%80%E6%96%87%E8%8F%AF%E8%B7%AF%E4%BA%8C%E6%AE%B566%E8%99%9F%EF%BC%88%E6%88%90%E5%8A%9F%E9%87%8C%EF%BC%89" target="_blank" rel="noopener">加入 Google 行事曆</a>
+        <a class="btn secondary" href="Dreamers.ics" download>下載 .ics</a>
+      </div>
+      <p class="meta" style="margin-top:8px"><a href="https://maps.google.com/?q=22.936863,120.225651" target="_blank" rel="noopener">Google 地圖座標</a>：22.936863, 120.225651（奇美博物館 布雷西亞廳沙龍區，717015 台南市仁德區文華路二段66號（成功里））</p>
+    </div>
+    <div>
+      <img src="assets/PosterDreamers.png" alt="我們都是追夢人 海報" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.12);box-shadow:0 10px 24px rgba(0,0,0,.35)">
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h3>天涯海角俱樂部 Faculty Club</h3>
+        <p>我們陪你拆解夢想的路徑：把遠方變近，把可能變現在。</p>
+      </div>
+      <div>
+        <h3>聯絡</h3>
+        <p>若你願意分享或志工協助，歡迎來信：<a href="mailto:info@example.org">info@example.org</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // countdown
+  (function(){
+    const target = new Date('2025-11-23T10:30:00+08:00').getTime();
+    const el = document.getElementById('countdown');
+    function pad(n){ return String(n).padStart(2,'0'); }
+    function tick(){ 
+      const now = Date.now(); let diff = Math.max(0, target - now);
+      const d = Math.floor(diff/86400000); diff -= d*86400000;
+      const h = Math.floor(diff/3600000);  diff -= h*3600000;
+      const m = Math.floor(diff/60000);
+      el.textContent = `距離開始：${d} 天 ${pad(h)} 小時 ${pad(m)} 分鐘`;
+    }
+    tick(); setInterval(tick, 30000);
+  })();
+</script>
+
+</body>
+</html>

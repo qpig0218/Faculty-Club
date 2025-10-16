@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//ChiMei//Dreamers//TW
+BEGIN:VEVENT
+UID:dreamers-2025-1123@chimei
+DTSTAMP:20251123T023000Z
+DTSTART:20251123T023000Z
+DTEND:20251123T040000Z
+SUMMARY:天涯海角俱樂部 — 追夢人
+LOCATION:奇美博物館 布雷西亞廳沙龍區，717015 台南市仁德區文華路二段66號（成功里）
+DESCRIPTION:曾經有個留學夢…想要踩著幾百年的石板路，看著霍格華茲校園的古建築；看著學生餐廳裡的壁爐，燃燒著我炙熱的夢想！！來吧！！聽聽海外回來的老師們，如何一步一步完成人生夢想清單☑️ 相信我，你也可以！
+END:VEVENT
+END:VCALENDAR
