@@ -22,12 +22,15 @@
     background:
       radial-gradient(circle at 20% 20%, rgba(255,77,166,.25) 0%, rgba(255,77,166,0) 40%),
       linear-gradient(180deg, rgba(11,16,32,.55), rgba(11,16,32,.8)),
-      url('assets/PosterDreamers.png') center/cover no-repeat;
+      url('追夢人.jpg') center/cover no-repeat;
   }
   .hero .wrap{width:100%;max-width:1200px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
   .brand{display:flex;gap:12px;align-items:center;margin-bottom:10px;opacity:.95}
+  .brand .logo{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:#0f1624;font-weight:700;border-radius:16px;padding:10px 14px;font-size:16px;box-shadow:0 6px 14px rgba(0,0,0,.25)}
   .brand .kicker{letter-spacing:.12em;text-transform:uppercase;font-weight:700;font-size:13px;color:#c7d9ff}
+  .brand .kicker strong{color:#fff;letter-spacing:.08em}
   h1{font-size:clamp(32px,4.4vw,64px);line-height:1.06;margin:6px 0 12px}
+  .hero-subtitle{font-size:.68em;letter-spacing:.04em}
   .badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
   .badge{background:rgba(255,255,255,.12);padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.2);font-size:13px}
   .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
@@ -88,9 +91,10 @@
   <div class="wrap container">
     <div>
       <div class="brand">
-        <div class="kicker">FACULTY CLUB — OFFICIAL</div>
+        <div class="logo">奇美</div>
+        <div class="kicker"><strong>CHI MEI</strong> FACULTY CLUB — OFFICIAL</div>
       </div>
-      <h1><span class="glint">我們都是追夢人</span><br>天涯海角俱樂部｜分享會</h1>
+      <h1><span class="glint">我們都是追夢人</span><br><span class="hero-subtitle">天涯海角俱樂部｜分享會</span></h1>
       <div class="badges">
         <span class="badge">2025/11/23（日）10:30–12:00（GMT+08:00 台北）</span>
         <span class="badge">地點：奇美博物館 布雷西亞廳沙龍區</span>
@@ -101,12 +105,11 @@
         <a class="btn" href="#register">我要參加</a>
         <a class="btn secondary" href="https://maps.google.com/?q=22.936863,120.225651" target="_blank" rel="noopener">查看地圖</a>
         <a class="btn secondary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92%E4%BF%B1%E6%A8%82%E9%83%A8%20%E2%80%94%20%E8%BF%BD%E5%A4%A2%E4%BA%BA&dates=20251123T023000Z/20251123T040000Z&details=%E6%9B%BE%E7%B6%93%E6%9C%89%E5%80%8B%E7%95%99%E5%AD%B8%E5%A4%A2%E2%80%A6%E6%83%B3%E8%A6%81%E8%B8%A9%E8%91%97%E5%B9%BE%E7%99%BE%E5%B9%B4%E7%9A%84%E7%9F%B3%E6%9D%BF%E8%B7%AF%EF%BC%8C%E7%9C%8B%E8%91%97%E9%9C%8D%E6%A0%BC%E8%8F%AF%E8%8C%B2%E6%A0%A1%E5%9C%92%E7%9A%84%E5%8F%A4%E5%BB%BA%E7%AF%89%EF%BC%9B%E7%9C%8B%E8%91%97%E5%AD%B8%E7%94%9F%E9%A4%90%E5%BB%B3%E8%A3%A1%E7%9A%84%E5%A3%81%E7%88%90%EF%BC%8C%E7%87%83%E7%87%92%E8%91%97%E6%88%91%E7%82%99%E7%86%B1%E7%9A%84%E5%A4%A2%E6%83%B3%EF%BC%81%EF%BC%81%E4%BE%86%E5%90%A7%EF%BC%81%EF%BC%81%E8%81%BD%E8%81%BD%E6%B5%B7%E5%A4%96%E5%9B%9E%E4%BE%86%E7%9A%84%E8%80%81%E5%B8%AB%E5%80%91%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AE%8C%E6%88%90%E4%BA%BA%E7%94%9F%E5%A4%A2%E6%83%B3%E6%B8%85%E5%96%AE%E2%98%91%EF%B8%8F%20%E7%9B%B8%E4%BF%A1%E6%88%91%EF%BC%8C%E4%BD%A0%E4%B9%9F%E5%8F%AF%E4%BB%A5%EF%BC%81&location=%E5%A5%87%E7%BE%8E%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E5%B8%83%E9%9B%B7%E8%A5%BF%E4%BA%9E%E5%BB%B3%E6%B2%99%E9%BE%8D%E5%8D%80%EF%BC%8C717015%20%E5%8F%B0%E5%8D%97%E5%B8%82%E4%BB%81%E5%BE%B7%E5%8D%80%E6%96%87%E8%8F%AF%E8%B7%AF%E4%BA%8C%E6%AE%B566%E8%99%9F%EF%BC%88%E6%88%90%E5%8A%9F%E9%87%8C%EF%BC%89">加入 Google 行事曆</a>
-        <a class="btn secondary" href="https://github.com/qpig0218/Faculty-Club/blob/main/Dreamers.ics" download>下載 .ics</a>
       </div>
       <p class="meta" id="countdown">距離開始：計算中…</p>
     </div>
     <div aria-hidden="true">
-      <img class="poster" src="assets/PosterDreamers.png" alt="https://github.com/qpig0218/Faculty-Club/commit/bc68088581e4cd0e2f5a7469e59cdf476b06a4cf#diff-a545728a4d396c348b71a0f1a7354ab5f0d8d5b87499825af906632ddd41d4a5">
+      <img class="poster" src="追夢人.jpg" alt="我們都是追夢人 海報">
     </div>
   </div>
 </header>
@@ -175,12 +178,11 @@
       <div class="cta" style="margin-top:8px">
         <a class="btn" href="#" aria-disabled="true">開啟報名表（待公布）</a>
         <a class="btn secondary" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=%E5%A4%A9%E6%B6%AF%E6%B5%B7%E8%A7%92%E4%BF%B1%E6%A8%82%E9%83%A8%20%E2%80%94%20%E8%BF%BD%E5%A4%A2%E4%BA%BA&dates=20251123T023000Z/20251123T040000Z&details=%E6%9B%BE%E7%B6%93%E6%9C%89%E5%80%8B%E7%95%99%E5%AD%B8%E5%A4%A2%E2%80%A6%E6%83%B3%E8%A6%81%E8%B8%A9%E8%91%97%E5%B9%BE%E7%99%BE%E5%B9%B4%E7%9A%84%E7%9F%B3%E6%9D%BF%E8%B7%AF%EF%BC%8C%E7%9C%8B%E8%91%97%E9%9C%8D%E6%A0%BC%E8%8F%AF%E8%8C%B2%E6%A0%A1%E5%9C%92%E7%9A%84%E5%8F%A4%E5%BB%BA%E7%AF%89%EF%BC%9B%E7%9C%8B%E8%91%97%E5%AD%B8%E7%94%9F%E9%A4%90%E5%BB%B3%E8%A3%A1%E7%9A%84%E5%A3%81%E7%88%90%EF%BC%8C%E7%87%83%E7%87%92%E8%91%97%E6%88%91%E7%82%99%E7%86%B1%E7%9A%84%E5%A4%A2%E6%83%B3%EF%BC%81%EF%BC%81%E4%BE%86%E5%90%A7%EF%BC%81%EF%BC%81%E8%81%BD%E8%81%BD%E6%B5%B7%E5%A4%96%E5%9B%9E%E4%BE%86%E7%9A%84%E8%80%81%E5%B8%AB%E5%80%91%EF%BC%8C%E5%A6%82%E4%BD%95%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E5%AE%8C%E6%88%90%E4%BA%BA%E7%94%9F%E5%A4%A2%E6%83%B3%E6%B8%85%E5%96%AE%E2%98%91%EF%B8%8F%20%E7%9B%B8%E4%BF%A1%E6%88%91%EF%BC%8C%E4%BD%A0%E4%B9%9F%E5%8F%AF%E4%BB%A5%EF%BC%81&location=%E5%A5%87%E7%BE%8E%E5%8D%9A%E7%89%A9%E9%A4%A8%20%E5%B8%83%E9%9B%B7%E8%A5%BF%E4%BA%9E%E5%BB%B3%E6%B2%99%E9%BE%8D%E5%8D%80%EF%BC%8C717015%20%E5%8F%B0%E5%8D%97%E5%B8%82%E4%BB%81%E5%BE%B7%E5%8D%80%E6%96%87%E8%8F%AF%E8%B7%AF%E4%BA%8C%E6%AE%B566%E8%99%9F%EF%BC%88%E6%88%90%E5%8A%9F%E9%87%8C%EF%BC%89" target="_blank" rel="noopener">加入 Google 行事曆</a>
-        <a class="btn secondary" href="Dreamers.ics" download>下載 .ics</a>
       </div>
       <p class="meta" style="margin-top:8px"><a href="https://maps.google.com/?q=22.936863,120.225651" target="_blank" rel="noopener">Google 地圖座標</a>：22.936863, 120.225651（奇美博物館 布雷西亞廳沙龍區，717015 台南市仁德區文華路二段66號（成功里））</p>
     </div>
     <div>
-      <img src="assets/PosterDreamers.png" alt="我們都是追夢人 海報" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.12);box-shadow:0 10px 24px rgba(0,0,0,.35)">
+      <img src="追夢人.jpg" alt="我們都是追夢人 海報" style="width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.12);box-shadow:0 10px 24px rgba(0,0,0,.35)">
     </div>
   </div>
 </section>
